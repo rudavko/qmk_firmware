@@ -5,78 +5,29 @@
 #define XXXXXXX KC_NO
 #define KC_LODASH RSFT(KC_MINS)
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-	/* Layer 0
-	 * ,-----------------------------------------------------------------------------------.
-	 * | Esc  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
-	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * | Tab  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  '   |
-	 * |------+------+------+------+------+------|------+------+------+------+------+------|
-	 * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |  /   |Shift |
-	 * |------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Ctrl |  GUI | ALT  | CMD  |Space | Lower|Enter |Raise | CMD  | ALT  | Third |Right |
-	 * `-----------------------------------------------------------------------------------'
-	 */
-	[0] = LAYOUT_ortho_4x12(
-		KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
-		KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,  KC_G,   KC_H,   KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-		KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-		KC_LCTL, KC_LGUI, KC_LALT, KC_LCMD, KC_SPC,MO(1),  KC_ENT, MO(2),KC_RCMD, KC_RALT, MO(3), KC_RGHT
-  ),
-
-	/* Lower
-	 * ,-----------------------------------------------------------------------------------.
- 	 * |  `  | brtup | brtdn |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |     |
-	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * |      | Vol- | Vol+ | Mute |      |      |      |  -   |  =   |   [  |   ]  |   \  |
-	 * |------+------+------+------+------+------|------+------+------+------+------+------|
-	 * |      |      |     |      |      |      |   _  |      |      |      |shift |
-	 * |------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Reset|      |      |      |      |      |      |      |      | opt  |      |      |
-	 * `-----------------------------------------------------------------------------------'
-	 */
-	[1] = LAYOUT_ortho_4x12(
-		KC_GRV,  KC_SLCK,   KC_PAUS,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-		_______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, _______, KC_MINS,  KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
-		_______,  _______, _______, _______, _______, _______, _______, KC_LODASH, _______, _______, _______, KC_RSFT,
-		RESET,   _______,  _______, _______, _______, _______, _______, _______, _______, KC_LALT, _______, _______
-	),
-
-	/* Raise
-	 * ,-----------------------------------------------------------------------------------.
-	 * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |      |
-	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * |      |  ALT |Enter |Space |  CMD |      |  left| down | up   | right|      |      |
-	 * |------+------+------+------+------+------|------+------+------+------+------+------|
-	 * |      |      |      |delete|bckspc|      |      |delete|bckspc|      |      |      |
-	 * |------+------+------+------+------+------+------+------+------+------+------+------|
-	 * |      |      |      |      |Shift |Enter |      |XXXXXX|      |      |      |      |
-	 * `------------------------------------------------------------------------------------'
-	 */
-	[2] = LAYOUT_ortho_4x12(
-		KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-		_______, KC_LALT, KC_ENT, KC_SPC, KC_LCMD, _______, KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT, _______, _______,
-		_______, _______, _______, KC_DEL , KC_BSPC, _______, _______, KC_DEL, KC_BSPC, _______, _______, _______,
-		_______, _______, _______, _______,  KC_LSFT, KC_ENT , _______, _______, _______, _______, _______, _______
-  ),
-	/* Third layer
-	 * ,-----------------------------------------------------------------------------------.
-	 * |      |BL_TOG|BL_STEP|      |      |      |      |      |      |      |       |     |
-	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * |      |      |      |      |      |      |      |      |      |      |      |      |
-	 * |------+------+------+------+------+------|------+------+------+------+------+------|
-	 * |      |      |      |      |      |      |      |      |      |      |      |      |
-	 * |------+------+------+------+------+------+------+------+------+------+------+------|
-	 * |      |      |      |      |      |      |      |      |      |      |      |      |
-	 * `-----------------------------------------------------------------------------------'
-	 */
-	[3] = LAYOUT_ortho_4x12(
-		_______, RGB_TOG,  RGB_MOD, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-  )
+	[0] = LAYOUT(
+   KC_ESC  , KC_Q    , KC_W    , KC_E    , KC_R          , KC_T    , KC_Y    , KC_U           , KC_I    , KC_O    , KC_P       , KC_BSPC ,
+   KC_TAB  , KC_A    , KC_S    , KC_D    , KC_F          , KC_G    , KC_H    , KC_J           , KC_K    , KC_L    , KC_SCLN    , KC_QUOT ,
+   KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_V          , KC_B    , KC_N    , KC_M           , KC_COMM , KC_DOT  , KC_SLSH    , KC_RSPC ,
+   KC_LCTL , MO  (4) , KC_LALT , KC_LGUI , LT (1,KC_SPC) , MO  (1) , MO  (2) , LT  (2,KC_ENT) , KC_RGUI , KC_RALT , MO     (3) , KC_NO
+   ),
+	[1] = LAYOUT(
+    KC_GRV, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+    ),
+	[2] = LAYOUT(
+    KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_NO, KC_NO, KC_LALT, KC_ENT, KC_SPC, KC_LGUI, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_DEL, KC_BSPC, KC_NO, KC_NO, KC_DEL, KC_BSPC, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_LSFT, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+    ),
+	[3] = LAYOUT(
+    KC_NO, KC_SLCK, KC_PAUS, KC_MUTE, KC_VOLD, KC_VOLU, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, RGB_TOG, RGB_RMOD, RGB_MOD, RGB_VAD, RGB_VAI, RGB_SPD, RGB_SPI, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO
+    ),
+	[4] = LAYOUT(
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO,KC_NO,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+    )
 };
 
 
