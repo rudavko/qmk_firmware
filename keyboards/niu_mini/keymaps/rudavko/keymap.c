@@ -7,7 +7,7 @@
 #define X_SCR3 SGUI(KC_3)
 #define X_SCR4 SGUI(KC_4)
 #define X_SPCL1 LT(1, KC_SPC)
-#define X_ENTL2 LT(1, KC_ENT)
+#define X_ENTL2 LT(2, KC_ENT)
 #define X_ESCT MT(MOD_LCTL ,KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
