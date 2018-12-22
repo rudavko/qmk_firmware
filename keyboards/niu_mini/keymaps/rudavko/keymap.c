@@ -10,6 +10,9 @@
 #define X_ENTL2 LT(2, KC_ENT)
 #define X_TABL5 LT(5, KC_TAB)
 #define X_ESCT MT(MOD_LCTL, KC_ESC)
+#define X_LSB MT(MOD_LGUI, KC_LCBR) // [ on the 2nd cmd
+#define X_RSB MT(MOD_RGUI, KC_RBRC) // ] on the 3rd cmd
+#define X_REQU LT(3, KC_EQL) // = on the RATL cmd
 #define X_LNCT MT(MOD_LCTL, KC_F13)
 #define AP_LTE LCAG(KC_L)
 #define AP_TRM LCAG(KC_T)
@@ -22,18 +25,22 @@
 #define AP_CHR LCAG(KC_C)
 #define AP_VSC LCAG(KC_V)
 #define AP_BEA LCAG(KC_B)
+//vscode
+#define VS_TERM LGUI(KC_GRV)
+#define VS_TAB1 LGUI(KC_1)
+#define VS_TAB2 LGUI(KC_2)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
     X_TABL5,  KC_Q,     KC_W,    KC_E,     KC_R,      KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     X_ESCT,   KC_A,     KC_S,    KC_D,     KC_F,      KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_COLN,  KC_QUOT,
     KC_LSPO,  KC_Z,     KC_X,    KC_C,     KC_V,      KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSPC,
-    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   KC_LGUI,  KC_RGUI,  X_ENTL2,  KC_RGUI,  KC_RALT,  MO(3),    KC_RCTL
+    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   X_LSB,    X_RSB,    X_ENTL2,  KC_RGUI,  KC_RALT,  X_REQU,    KC_RCTL
    ),
 	[1] = LAYOUT(
     KC_GRV,   KC_UP,    KC_1,    KC_2,     KC_3,      X_SCR3,   _______,  _______,  _______,  KC_MINS,  KC_EQL,   _______,
     KC_LEFT,  KC_RGHT,  KC_4,    KC_5,     KC_6,      X_SCR4,   _______,  KC_LCBR,  KC_LBRC,  KC_RCBR,  KC_RBRC,  KC_BSLS,
-    _______,  KC_DOWN,  KC_7,    KC_8,     KC_9,      KC_BSPC,  _______,  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  _______,
+    KC_ENT,   KC_DOWN,  KC_7,    KC_8,     KC_9,      KC_BSPC,  _______,  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,  _______,
     KC_ENT,   _______,  KC_0,    KC_ENT,   _______,   KC_TRNS,  _______,  _______,  _______,  _______,  _______,  _______
     ),
 	[2] = LAYOUT(
@@ -52,13 +59,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______, _______,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
-    _______,  KC_TRNS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______
+    _______,  KC_TRNS,  _______,  _______,  LGUI(KC_ENT),  _______,  _______,  _______,  _______,  _______,  _______, _______
     ),
 	[5] = LAYOUT(//Applivation launch
     _______,  _______,  _______,  _______,  _______,  AP_TRM,   _______,  _______,  _______,  _______,  _______, _______,
-    _______,  _______,  AP_SAF,   AP_DSK,  AP_FND,   AP_GHB,   AP_HPR,   AP_JMP,   _______,  AP_LTE,   _______, _______,
+    _______,  _______,  AP_SAF,   AP_DSK,   AP_FND,   AP_GHB,   AP_HPR,   AP_JMP,   _______,  AP_LTE,   _______, _______,
     _______,  _______,  _______,  AP_CHR,   AP_VSC,   AP_BEA,   _______,  _______,  _______,  _______,  _______, _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______
+    _______,  _______,  _______,  VS_TERM,  VS_TAB1,  VS_TAB2,  _______,  _______,  _______,  _______,  _______, _______
     )
 	// [] = LAYOUT(//EMPTY layout
   //   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
