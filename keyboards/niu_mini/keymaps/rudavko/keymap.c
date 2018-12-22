@@ -12,7 +12,9 @@
 #define X_ESCT MT(MOD_LCTL, KC_ESC)
 #define X_LNCT MT(MOD_LCTL, KC_F13)
 #define AP_LTE LCAG(KC_L)
+#define AP_TRM LCAG(KC_T)
 #define AP_SAF LCAG(KC_S)
+#define AP_DSK LCAG(KC_D)
 #define AP_FND LCAG(KC_F)
 #define AP_GHB LCAG(KC_G)
 #define AP_HPR LCAG(KC_H)
@@ -53,8 +55,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_TRNS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______
     ),
 	[5] = LAYOUT(//Applivation launch
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
-    _______,  _______,  AP_SAF,   _______,  AP_FND,   AP_GHB,   AP_HPR,   AP_JMP,   _______,  AP_LTE,   _______, _______,
+    _______,  _______,  _______,  _______,  _______,  AP_TRM,   _______,  _______,  _______,  _______,  _______, _______,
+    _______,  _______,  AP_SAF,   AP_DSK,  AP_FND,   AP_GHB,   AP_HPR,   AP_JMP,   _______,  AP_LTE,   _______, _______,
     _______,  _______,  _______,  AP_CHR,   AP_VSC,   AP_BEA,   _______,  _______,  _______,  _______,  _______, _______,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______
     )
