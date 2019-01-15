@@ -2,18 +2,25 @@
 // make niu_mini:rudavko
 #include QMK_KEYBOARD_H
 
-// readability
-#define KC_LODASH RSFT(KC_MINS)
+// taking screenshots
 #define X_SCR3 SGUI(KC_3)
 #define X_SCR4 SGUI(KC_4)
+
+//layout switches
 #define X_SPCL1 LT(1, KC_SPC)
 #define X_ENTL2 LT(2, KC_ENT)
 #define X_TABL5 LT(5, KC_TAB)
+
+//escape/control
 #define X_ESCT MT(MOD_LCTL, KC_ESC)
+
+//brackets and equal sign
 #define X_LSB MT(MOD_LGUI, KC_LCBR) // [ on the 2nd cmd
 #define X_RSB MT(MOD_RGUI, KC_RBRC) // ] on the 3rd cmd
 #define X_REQU LT(3, KC_EQL) // = on the RATL cmd
-#define X_LNCT MT(MOD_LCTL, KC_F13)
+#define X_LNCT MT(MOD_LCTL, KC_F13) // language switch on left control
+
+// application switching shotrcut
 #define AP_LTE LCAG(KC_L)
 #define AP_TRM LCAG(KC_T)
 #define AP_SAF LCAG(KC_S)
