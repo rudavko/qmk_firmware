@@ -32,6 +32,13 @@
 #define AP_CHR LCAG(KC_C)
 #define AP_VSC LCAG(KC_V)
 #define AP_BEA LCAG(KC_B)
+
+//window snapping
+#define LCAG_1 LCAG(KC_1)
+#define LCAG_2 LCAG(KC_2)
+#define LCAG_3 LCAG(KC_3)
+#define LCAG_4 LCAG(KC_4)
+
 //vscode
 #define VS_TERM LGUI(KC_GRV)
 #define VS_TAB1 LGUI(KC_1)
@@ -54,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______,
     _______,  KC_LALT,  KC_ENT,   KC_SPC,   KC_LGUI,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_SCLN,  _______,
     _______,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  KC_LSFT,  _______,  KC_TRNS,  _______,  _______,  _______,  _______,  _______
+    _______,  _______,  _______,  _______,  KC_LSFT,  _______,  KC_TRNS,  _______,  LCAG_1,   LCAG_2,   LCAG_3,   LCAG_4
     ),
 	[3] = LAYOUT(
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
