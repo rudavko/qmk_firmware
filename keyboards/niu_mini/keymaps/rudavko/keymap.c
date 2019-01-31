@@ -17,7 +17,7 @@
 //brackets and equal sign
 #define X_LSB MT(MOD_LGUI, KC_LCBR) // [ on the 2nd cmd
 #define X_RSB MT(MOD_RGUI, KC_RBRC) // ] on the 3rd cmd
-#define X_REQU LT(3, KC_EQL) // = on the RATL cmd
+#define X_REQUL3 LT(3, KC_EQL) // = on the RATL cmd
 #define X_LNCT MT(MOD_LCTL, KC_F13) // language switch on left control
 
 // application switching shotrcut
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     X_TABL5,  KC_Q,     KC_W,    KC_E,     KC_R,      KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     X_ESCT,   KC_A,     KC_S,    KC_D,     KC_F,      KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_COLN,  KC_QUOT,
     KC_LSPO,  KC_Z,     KC_X,    KC_C,     KC_V,      KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSPC,
-    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   X_LSB,    X_RSB,    X_ENTL2,  KC_RGUI,  KC_RALT,  X_REQU,   MO(6)
+    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   X_LSB,    X_RSB,    X_ENTL2,  KC_RGUI,  KC_RALT,  X_REQUL3, MO(6)
    ),
 	[1] = LAYOUT(
     KC_GRV,   KC_UP,    KC_1,    KC_2,     KC_3,      X_SCR3,   _______,  _______,  _______,  KC_MINS,  KC_EQL,   _______,
@@ -58,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ENT,   _______,  KC_0,    KC_ENT,   _______,   KC_TRNS,  _______,  _______,  _______,  _______,  _______,  _______
     ),
 	[2] = LAYOUT(
-    KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______,
-    _______,  KC_LALT,  KC_ENT,   KC_SPC,   KC_LGUI,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_SCLN,  _______,
+    KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_SLSH,
+    _______,  KC_LALT,  KC_ENT,   KC_SPC,   KC_LGUI,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_SCLN,  KC_BSLS,
     _______,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  _______,
     _______,  _______,  _______,  _______,  KC_LSFT,  _______,  KC_TRNS,  _______,  LCAG_1,   LCAG_2,   LCAG_3,   LCAG_4
     ),
