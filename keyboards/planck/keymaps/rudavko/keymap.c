@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     X_TABL5,  KC_Q,     KC_W,    KC_E,     KC_R,      KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     X_ESCT,   KC_A,     KC_S,    KC_D,     KC_F,      KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_COLN,  KC_QUOT,
     KC_LSPO,  KC_Z,     KC_X,    KC_C,     KC_V,      KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSPC,
-    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   X_LSB,    X_RSB,    X_ENTL2,  KC_RGUI,  KC_RALT,  X_REQUL3, MO(6)
+    X_LNCT,   MO(4),    KC_LALT, KC_LGUI,  X_SPCL1,   X_LSB,    X_RSB,    X_ENTL2,  KC_RALT,  KC_RGUI,  MO(3),    MO(6)
    ),
 	[1] = LAYOUT_planck_grid(
     KC_GRV,   KC_UP,    KC_1,    KC_2,     KC_3,      X_SCR3,   _______,  _______,  _______,  KC_MINS,  KC_EQL,   _______,
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
     _______,  KC_SLCK,  KC_PAUS,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______,  _______,
     _______,  RGB_TOG,  RGB_RMOD, RGB_MOD,  RGB_VAD,  RGB_VAI,  RGB_SPD,  RGB_SPI,  _______,  _______,  _______,  _______,
-    RESET,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_TRNS,  _______
+    RESET,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______
     ),
 	[4] = LAYOUT_planck_grid(
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
