@@ -15,8 +15,8 @@
 #define X_ESCT MT(MOD_LCTL, KC_ESC)
 
 //brackets and equal sign
-#define X_LSB MT(MOD_LGUI, KC_LCBR)   // [ on the 2nd cmd
-#define X_RSB MT(MOD_RALT, KC_RBRC)   // ] on the 3rd фде
+#define X_LSB MT(MOD_RALT, KC_LCBR)   // [ on the 2nd cmd
+#define X_RSB MT(MOD_LGUI, KC_RBRC)   // ] on the 3rd фде
 #define X_REQUL3 LT(3, KC_EQL)        // = on the RATL cmd
 #define X_LNCT MT(MOD_LCTL, KC_F13)   // language switch on left control
 #define X_SPTL LGUI(KC_SPC)           // CMD + Space
