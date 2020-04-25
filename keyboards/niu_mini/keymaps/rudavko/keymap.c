@@ -44,6 +44,10 @@
 #define VS_TAB1 LGUI(KC_1)
 #define VS_TAB2 LGUI(KC_2)
 
+//various
+#define CT_AL_DE LCTL(LALT(KC_DEL))
+#define CMD_RET LGUI(KC_ENT)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
     X_TABL5,  KC_Q,     KC_W,    KC_E,     KC_R,      KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
@@ -73,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______, _______,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
-    _______,  KC_TRNS,  _______,  _______,  LGUI(KC_ENT),  _______,  _______,  _______,  _______,  _______,  _______, _______
+    _______,  KC_TRNS,  CTAL_DE,  _______,  CMD_RET,  _______,  _______,  _______,  _______,  _______,  _______, _______
     ),
 	[5] = LAYOUT(//Applivation launch
     _______,  _______,  _______,  _______,  _______,  AP_TRM,   _______,  _______,  _______,  _______,  _______, _______,
