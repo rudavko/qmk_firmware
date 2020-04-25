@@ -45,7 +45,7 @@
 #define VS_TAB2 LGUI(KC_2)
 
 //various
-#define CT_AL_DE LCTL(LALT(KC_DEL))
+#define CTAL_DE LCTL(LALT(KC_DEL))
 #define CMD_RET LGUI(KC_ENT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
