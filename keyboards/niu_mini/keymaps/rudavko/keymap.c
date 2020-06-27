@@ -20,25 +20,6 @@
 #define X_REQUL3 LT(3, KC_EQL) // = on the RATL cmd
 #define X_LNCT MT(MOD_LCTL, KC_F13) // language switch on left control
 
-// application switching shotrcut
-#define AP_LTE LCAG(KC_L)
-#define AP_TRM LCAG(KC_T)
-#define AP_SAF LCAG(KC_S)
-#define AP_DSK LCAG(KC_D)
-#define AP_FND LCAG(KC_F)
-#define AP_GHB LCAG(KC_G)
-#define AP_HPR LCAG(KC_H)
-#define AP_JMP LCAG(KC_J)
-#define AP_CHR LCAG(KC_C)
-#define AP_VSC LCAG(KC_V)
-#define AP_BEA LCAG(KC_B)
-
-//window snapping
-#define LCAG_1 LCAG(KC_1)
-#define LCAG_2 LCAG(KC_2)
-#define LCAG_3 LCAG(KC_3)
-#define LCAG_4 LCAG(KC_4)
-
 //vscode
 #define VS_TERM LGUI(KC_GRV)
 #define VS_TAB1 LGUI(KC_1)
@@ -65,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______,
     _______,  KC_LALT,  KC_ENT,   KC_SPC,   KC_LGUI,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_SCLN,  KC_BSLS,
     _______,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  KC_DEL,   KC_BSPC,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  KC_LSFT,  _______,  KC_TRNS,  _______,  LCAG_1,   LCAG_2,   LCAG_3,   LCAG_4
+    _______,  _______,  _______,  _______,  KC_LSFT,  _______,  KC_TRNS,  _______,  _______,  _______,  _______,  _______
     ),
 	[3] = LAYOUT(
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
@@ -80,10 +61,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_TRNS,  CTAL_DE,  _______,  CMD_RET,  _______,  _______,  _______,  _______,  _______,  _______, _______
     ),
 	[5] = LAYOUT(//Applivation launch
-    _______,  _______,  _______,  _______,  _______,  AP_TRM,   _______,  _______,  _______,  _______,  _______, _______,
-    _______,  _______,  AP_SAF,   AP_DSK,   AP_FND,   AP_GHB,   AP_HPR,   AP_JMP,   _______,  AP_LTE,   _______, _______,
-    _______,  _______,  _______,  AP_CHR,   AP_VSC,   AP_BEA,   _______,  _______,  _______,  _______,  _______, _______,
-    _______,  _______,  _______,  VS_TERM,  VS_TAB1,  VS_TAB2,  _______,  _______,  _______,  _______,  _______, _______
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, _______
     ),
 	[6] = LAYOUT(
     _______,  S(KC_1),  S(KC_2),  S(KC_3),  S(KC_4),  S(KC_5),  S(KC_6),  S(KC_7),  S(KC_8),  S(KC_9),  S(KC_0), _______,
